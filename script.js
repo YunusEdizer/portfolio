@@ -235,6 +235,34 @@
     });
   }
 
+  /* ---- Scrollspy: highlight active nav link ---- */
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const spySections = Array.from(navLinks)
+    .map((a) => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+  if ('IntersectionObserver' in window && spySections.length) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const id = '#' + e.target.id;
+          navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    spySections.forEach((s) => spy.observe(s));
+  }
+
+  /* ---- Scroll-to-top button ---- */
+  const toTop = document.getElementById('toTop');
+  if (toTop) {
+    window.addEventListener('scroll', () => {
+      toTop.classList.toggle('show', document.documentElement.scrollTop > 600);
+    }, { passive: true });
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  }
+
   /* ---- Hero typewriter role ---- */
   const typeEl = document.getElementById('typeText');
   if (typeEl) {
