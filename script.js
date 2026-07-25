@@ -235,6 +235,51 @@
     });
   }
 
+  /* ---- Hero typewriter role ---- */
+  const typeEl = document.getElementById('typeText');
+  if (typeEl) {
+    const roles = ['Backend Mimarisi', 'Yapay Zeka & ML', 'Dağıtık Sistemler', 'Full-Stack Geliştirme'];
+    if (reduce) {
+      typeEl.textContent = roles[0];
+    } else {
+      let ri = 0, ci = 0, deleting = false;
+      (function tick() {
+        const word = roles[ri];
+        typeEl.textContent = word.slice(0, ci);
+        let delay;
+        if (!deleting) {
+          ci++;
+          delay = 70;
+          if (ci > word.length) { deleting = true; delay = 1600; }
+        } else {
+          ci--;
+          delay = 36;
+          if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; delay = 340; }
+        }
+        setTimeout(tick, delay);
+      })();
+    }
+  }
+
+  /* ---- Cursor spotlight (follows pointer with easing) ---- */
+  if (!reduce && finePointer) {
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    let gx = window.innerWidth / 2, gy = window.innerHeight / 2, tx = gx, ty = gy, active = false;
+    window.addEventListener('mousemove', (e) => {
+      tx = e.clientX; ty = e.clientY;
+      if (!active) { active = true; glow.style.opacity = '1'; }
+    }, { passive: true });
+    document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; active = false; });
+    (function follow() {
+      gx += (tx - gx) * 0.14;
+      gy += (ty - gy) * 0.14;
+      glow.style.transform = `translate(${gx}px, ${gy}px)`;
+      requestAnimationFrame(follow);
+    })();
+  }
+
   /* ---- Subtle parallax on hero orbs (pointer) ---- */
   const orbs = document.querySelectorAll('.orb');
   if (!reduce && window.matchMedia('(pointer: fine)').matches) {
