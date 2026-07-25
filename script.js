@@ -1,0 +1,199 @@
+/* ============================================================
+   Portfolio interactions
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* ---- Scroll progress bar ---- */
+  const progress = document.getElementById('scrollProgress');
+  const nav = document.getElementById('nav');
+
+  function onScroll() {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    progress.style.width = (scrolled * 100) + '%';
+    nav.classList.toggle('scrolled', h.scrollTop > 20);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Reveal on scroll ---- */
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('in'));
+  }
+
+  /* ---- Animated stat counters ---- */
+  const stats = document.querySelectorAll('.stat-num');
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1400;
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(easeOut(p) * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    const statIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { animateCount(e.target); statIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    stats.forEach((s) => statIO.observe(s));
+  } else {
+    stats.forEach((s) => { s.textContent = s.dataset.target + (s.dataset.suffix || ''); });
+  }
+
+  /* ---- Mobile menu ---- */
+  const toggle = document.getElementById('navToggle');
+  const mobile = document.getElementById('navMobile');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    mobile.classList.toggle('open');
+  });
+  mobile.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      mobile.classList.remove('open');
+    });
+  });
+
+  /* ---- Project filters ---- */
+  const filterBar = document.getElementById('filters');
+  const grid = document.getElementById('projectGrid');
+  if (filterBar && grid) {
+    const cards = Array.from(grid.querySelectorAll('.project'));
+    filterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach((card) => {
+        const cats = (card.dataset.cat || '').split(' ');
+        const show = f === 'all' || cats.includes(f);
+        card.classList.remove('filtering');
+        if (show) {
+          card.classList.remove('hide');
+          // reflow to restart the entry animation
+          void card.offsetWidth;
+          card.classList.add('filtering');
+        } else {
+          card.classList.add('hide');
+        }
+      });
+    });
+  }
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+
+  /* ---- Theme toggle (persisted) ---- */
+  const themeBtn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  let saved = null;
+  try { saved = localStorage.getItem('theme'); } catch (_) {}
+  if (saved) root.setAttribute('data-theme', saved);
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (_) {}
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'light' ? '#f4f2ec' : '#0a0b0e');
+    });
+  }
+
+  /* ---- Project detail modal ---- */
+  const modal = document.getElementById('modal');
+  if (modal && grid) {
+    const mEmoji = document.getElementById('modalEmoji');
+    const mTag = document.getElementById('modalTag');
+    const mTitle = document.getElementById('modalTitle');
+    const mDesc = document.getElementById('modalDesc');
+    const mTech = document.getElementById('modalTech');
+    const mNote = document.getElementById('modalNote');
+    const mActions = document.getElementById('modalActions');
+
+    function openModal(card) {
+      mEmoji.textContent = card.querySelector('.project-emoji').textContent;
+      mTitle.textContent = card.querySelector('h3').textContent;
+      mTag.textContent = card.querySelector('.tag').textContent.replace('●', '').trim();
+      mDesc.textContent = card.querySelector('.project-body p').textContent;
+      mTech.innerHTML = card.querySelector('.project-tech').innerHTML;
+      mNote.textContent = card.dataset.note || '';
+      let actions = '';
+      if (card.dataset.live) actions += `<a class="m-live" href="${card.dataset.live}" target="_blank" rel="noopener">↗ Canlı Demo</a>`;
+      if (card.dataset.code) actions += `<a class="m-code" href="${card.dataset.code}" target="_blank" rel="noopener">⌥ Kaynak Kod</a>`;
+      mActions.innerHTML = actions;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+    grid.querySelectorAll('.project').forEach((card) => {
+      card.addEventListener('click', () => openModal(card));
+    });
+    modal.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  }
+
+  /* ---- 3D tilt on project cards ---- */
+  if (!reduce && finePointer && grid) {
+    grid.querySelectorAll('.project').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateY(${px * 6}deg) rotateX(${-py * 6}deg) translateY(-8px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+  }
+
+  /* ---- Magnetic buttons ---- */
+  if (!reduce && finePointer) {
+    document.querySelectorAll('[data-magnetic]').forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  /* ---- Subtle parallax on hero orbs (pointer) ---- */
+  const orbs = document.querySelectorAll('.orb');
+  if (!reduce && window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5);
+      const y = (e.clientY / window.innerHeight - 0.5);
+      orbs.forEach((orb, i) => {
+        const depth = (i + 1) * 14;
+        orb.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+      });
+    }, { passive: true });
+  }
+})();
