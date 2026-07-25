@@ -141,6 +141,7 @@
       let actions = '';
       if (card.dataset.live) actions += `<a class="m-live" href="${card.dataset.live}" target="_blank" rel="noopener">↗ Canlı Demo</a>`;
       if (card.dataset.store) actions += `<a class="m-live" href="${card.dataset.store}" target="_blank" rel="noopener">↗ App Store</a>`;
+      if (card.dataset.play) actions += `<a class="m-live" href="${card.dataset.play}" target="_blank" rel="noopener">↗ Google Play</a>`;
       if (card.dataset.code) actions += `<a class="m-code" href="${card.dataset.code}" target="_blank" rel="noopener">⌥ Kaynak Kod</a>`;
       mActions.innerHTML = actions;
       modal.classList.add('open');
