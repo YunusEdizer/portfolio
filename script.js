@@ -184,6 +184,55 @@
     });
   }
 
+  /* ---- Contact form (Formspree AJAX) ---- */
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('cfSubmit');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'form-status';
+      status.textContent = '';
+
+      if (!form.checkValidity()) {
+        status.className = 'form-status err';
+        status.textContent = 'Lütfen tüm alanları doğru şekilde doldurun.';
+        return;
+      }
+      // Guard: form not yet configured with a real Formspree endpoint
+      if (form.action.includes('YOUR_FORM_ID')) {
+        status.className = 'form-status err';
+        status.textContent = 'Form henüz yapılandırılmadı. (Formspree endpoint eklenmeli.)';
+        return;
+      }
+
+      const original = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Gönderiliyor…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          status.className = 'form-status ok';
+          status.textContent = 'Teşekkürler! Mesajın ulaştı, en kısa sürede dönüş yapacağım.';
+        } else {
+          status.className = 'form-status err';
+          status.textContent = 'Bir şeyler ters gitti. Lütfen e-posta ile ulaşmayı dene.';
+        }
+      } catch (_) {
+        status.className = 'form-status err';
+        status.textContent = 'Bağlantı hatası. Lütfen e-posta ile ulaşmayı dene.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = original;
+      }
+    });
+  }
+
   /* ---- Subtle parallax on hero orbs (pointer) ---- */
   const orbs = document.querySelectorAll('.orb');
   if (!reduce && window.matchMedia('(pointer: fine)').matches) {

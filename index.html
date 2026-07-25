@@ -348,6 +348,28 @@
         <span class="eyebrow">05 — İletişim</span>
         <h2 class="section-title">Bir sonraki projede<br /><span class="grad">birlikte çalışalım.</span></h2>
         <p class="contact-sub">Backend, yapay zeka veya full-stack bir fikrin mi var? Konuşalım.</p>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">Ad Soyad</label>
+              <input id="cf-name" name="name" type="text" required placeholder="Adınız" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="cf-email">E-posta</label>
+              <input id="cf-email" name="email" type="email" required placeholder="ornek@mail.com" autocomplete="email" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-msg">Mesaj</label>
+            <textarea id="cf-msg" name="message" rows="4" required placeholder="Projeniz veya fikriniz hakkında kısaca..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="cfSubmit" data-magnetic>Mesaj Gönder</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-divider"><span>veya doğrudan ulaş</span></div>
+
         <div class="contact-links">
           <a href="mailto:edizeryunusemre@gmail.com" class="c-link"><span>✉</span> edizeryunusemre@gmail.com</a>
           <a href="tel:+905382374571" class="c-link"><span>☎</span> +90 538 237 45 71</a>
