@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yunus Emre Edizer — Yazılım Mühendisi</title>
-  <meta name="description" content="Full-Stack Yazılım Mühendisi — Backend, Yapay Zeka & Dağıtık Sistemler. .NET Core, Next.js ve Python ekosistemlerinde ölçeklenebilir sistemler." />
+  <meta name="description" content="Full-Stack Yazılım Mühendisi — Backend, Yapay Zeka, Mobil & Web. .NET, Next.js, React Native ve Python ile fikirden canlıya ölçeklenebilir sistemler." />
   <meta name="author" content="Yunus Emre Edizer" />
   <meta name="theme-color" content="#0a0b0e" />
   <link rel="canonical" href="https://yunusedizer.software/" />
@@ -39,7 +39,7 @@
       "https://github.com/YunusEdizer",
       "https://linkedin.com/in/edizeryunusemre"
     ],
-    "knowsAbout": ["Backend Geliştirme", "Yapay Zeka", "Makine Öğrenmesi", "Dağıtık Sistemler", ".NET", "Next.js", "Python", "PyTorch"],
+    "knowsAbout": ["Backend Geliştirme", "Yapay Zeka", "Makine Öğrenmesi", "Dağıtık Sistemler", "Mobil Uygulama", "Teknik SEO", ".NET", "Next.js", "React Native", "Python", "PyTorch", "PostGIS"],
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "İstanbul Topkapı Üniversitesi" }
   }
   </script>
@@ -129,9 +129,9 @@
       </div>
       <div class="about-grid">
         <p class="about-lead reveal">
-          .NET Core / .NET 9, Next.js ve Python ekosistemlerinde uzmanlaşmış bir yazılım mühendisiyim.
-          Backend mimarisi, makine öğrenmesi entegrasyonu, kantitatif finans ve bilgisayarlı görü
-          alanlarında metrik odaklı proje deneyimine sahibim.
+          .NET, Next.js, React Native ve Python ekosistemlerinde uzmanlaşmış bir yazılım mühendisiyim.
+          Backend mimarisi, makine öğrenmesi entegrasyonu, coğrafi sistemler (PostGIS) ve mobil
+          uygulamalar alanında, canlıda çalışan ürünler geliştiriyorum.
         </p>
         <div class="about-points">
           <div class="point reveal" style="--d:.1s">
@@ -145,6 +145,10 @@
           <div class="point reveal" style="--d:.3s">
             <span class="point-ico">◆</span>
             <div><h4>DevOps &amp; TDD</h4><p>Docker, GitHub Actions CI/CD, xUnit ile %100 geçen test suitleri ve otomasyon.</p></div>
+          </div>
+          <div class="point reveal" style="--d:.4s">
+            <span class="point-ico">◆</span>
+            <div><h4>Ürün &amp; Yayın</h4><p>App Store ve Google Play'de yayında mobil uygulama; yerel işletmeler için SEO odaklı, hızlı web siteleri.</p></div>
           </div>
         </div>
       </div>
@@ -160,7 +164,7 @@
         <article class="stack-card reveal">
           <h4>Diller &amp; Backend</h4>
           <div class="chips">
-            <span>C#</span><span>.NET 9</span><span>Python</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>TypeScript</span><span>SQL</span><span>C/C++</span>
+            <span>C#</span><span>.NET 8/9</span><span>Python</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>TypeScript</span><span>SQL</span><span>C/C++</span>
           </div>
         </article>
         <article class="stack-card reveal" style="--d:.1s">
@@ -172,7 +176,7 @@
         <article class="stack-card reveal" style="--d:.2s">
           <h4>Frontend &amp; Mobil</h4>
           <div class="chips">
-            <span>Next.js 14</span><span>React</span><span>Tailwind</span><span>PWA</span><span>Flutter/Dart</span><span>HTML5/CSS3</span>
+            <span>Next.js 16</span><span>React</span><span>React Native</span><span>Expo</span><span>MapLibre</span><span>Tailwind</span><span>PWA</span><span>Flutter/Dart</span>
           </div>
         </article>
         <article class="stack-card reveal" style="--d:.3s">
@@ -184,7 +188,7 @@
         <article class="stack-card reveal" style="--d:.4s">
           <h4>DB, DevOps &amp; Güvenlik</h4>
           <div class="chips">
-            <span>PostgreSQL</span><span>Supabase</span><span>MongoDB</span><span>Docker</span><span>Nginx</span><span>GitHub Actions</span><span>Azure</span><span>JWT</span><span>KVKK/GDPR</span>
+            <span>PostgreSQL</span><span>PostGIS</span><span>Supabase</span><span>MongoDB</span><span>Docker</span><span>Nginx</span><span>GitHub Actions</span><span>Azure</span><span>Vercel</span><span>JWT</span><span>KVKK/GDPR</span>
           </div>
         </article>
       </div>
@@ -206,19 +210,19 @@
         <button class="filter" data-filter="finance">Finans</button>
       </div>
       <div class="projects" id="projectGrid">
-        <article class="project reveal" data-cat="fullstack backend" data-live="https://motorumburada.com" data-code="https://github.com/YunusEdizer">
+        <article class="project reveal" data-cat="fullstack backend" data-live="https://motorumburada.com" data-note="Kendi girişimim — kaynak kodu özeldir.">
           <div class="project-media"><span class="project-emoji">🏍️</span></div>
           <div class="project-body">
             <div class="project-top">
               <h3>MotorumBurada</h3>
               <span class="tag tag-live">● Canlı</span>
             </div>
-            <p>Production motosiklet pazaryeri (motorumburada.com). .NET 8 N-Tier API + Next.js/React 19 + PostGIS konum araması + SignalR gerçek zamanlı sohbet + Web Push. Repository/UnitOfWork, Result pattern, admin moderasyon paneli ve audit log.</p>
+            <p>Canlıda çalışan motosiklet pazaryeri (motorumburada.com). .NET 8 N-Tier API + Next.js/React 19 + PostGIS konum araması + SignalR gerçek zamanlı sohbet + Web Push. Repository/UnitOfWork, Result pattern, admin moderasyon paneli ve audit log.</p>
             <div class="project-tech"><span>.NET 8</span><span>Next.js</span><span>SignalR</span><span>PostGIS</span></div>
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mobile" data-store="https://apps.apple.com/tr/app/motorumburada/id6791850764" data-play="https://play.google.com/store/apps/details?id=com.motorumburada" data-code="https://github.com/YunusEdizer" style="--d:0.05s">
+        <article class="project reveal" data-cat="mobile" data-store="https://apps.apple.com/tr/app/motorumburada/id6791850764" data-play="https://play.google.com/store/apps/details?id=com.motorumburada" data-note="Kendi girişimim — kaynak kodu özeldir." style="--d:0.05s">
           <div class="project-media"><span class="project-emoji">📱</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -350,7 +354,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="finance" data-code="https://github.com/YunusEdizer" style="--d:0.60s">
+        <article class="project reveal" data-cat="finance" data-note="Kaynak kodu talep üzerine paylaşılır." style="--d:0.60s">
           <div class="project-media"><span class="project-emoji">📈</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -362,7 +366,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="finance ai" data-code="https://github.com/YunusEdizer" style="--d:0.65s">
+        <article class="project reveal" data-cat="finance ai" data-note="Kaynak kodu talep üzerine paylaşılır." style="--d:0.65s">
           <div class="project-media"><span class="project-emoji">🧠</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -398,7 +402,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mobile" data-code="https://github.com/YunusEdizer" style="--d:0.80s">
+        <article class="project reveal" data-cat="mobile" data-note="Kaynak kodu talep üzerine paylaşılır." style="--d:0.80s">
           <div class="project-media"><span class="project-emoji">🛡️</span></div>
           <div class="project-body">
             <div class="project-top">
