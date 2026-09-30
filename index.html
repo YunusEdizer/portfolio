@@ -202,6 +202,7 @@
         <button class="filter" data-filter="fullstack">Full-Stack</button>
         <button class="filter" data-filter="backend">Backend</button>
         <button class="filter" data-filter="mobile">Mobil</button>
+        <button class="filter" data-filter="web">Web &amp; Yerel İşletme</button>
         <button class="filter" data-filter="finance">Finans</button>
       </div>
       <div class="projects" id="projectGrid">
@@ -217,7 +218,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mobile" data-store="https://apps.apple.com/tr/app/motorumburada/id6791850764" data-play="https://play.google.com/store/apps/details?id=com.motorumburada" data-code="https://github.com/YunusEdizer" style="--d:.05s">
+        <article class="project reveal" data-cat="mobile" data-store="https://apps.apple.com/tr/app/motorumburada/id6791850764" data-play="https://play.google.com/store/apps/details?id=com.motorumburada" data-code="https://github.com/YunusEdizer" style="--d:0.05s">
           <div class="project-media"><span class="project-emoji">📱</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -229,7 +230,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="ai fullstack" data-live="https://deeppsy.eurotechbilisim.com.tr" data-note="Kurumsal Ar-Ge projesi (Eurotech Bilişim A.Ş.) — kaynak kodu özeldir." style="--d:.1s">
+        <article class="project reveal" data-cat="ai fullstack" data-live="https://deeppsy.eurotechbilisim.com.tr" data-note="Kurumsal Ar-Ge projesi (Eurotech Bilişim A.Ş.) — kaynak kodu özeldir." style="--d:0.10s">
           <div class="project-media"><span class="project-emoji">🩺</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -241,7 +242,31 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="fullstack" data-live="https://noteblog-ctgpcke8hpcmbnf4.germanywestcentral-01.azurewebsites.net" data-code="https://github.com/YunusEdizer" style="--d:.15s">
+        <article class="project reveal" data-cat="fullstack backend" data-note="Müşteri projesi — geliştirme aşamasında, kaynak kodu özeldir." style="--d:0.15s">
+          <div class="project-media"><span class="project-emoji">🗺️</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Sanal Parsel</h3>
+              <span class="tag">Geliştiriliyor</span>
+            </div>
+            <p>Türkiye haritasını 20×20 m'lik (400 m²) sanal parsellere bölen satış platformu. Alanı bire bir koruyan eşit alanlı (LAEA) projeksiyon — 1,96 milyar parselin hiçbiri DB'ye yazılmaz, kimlik koordinattan türetilir. MVT vektör karo servisi, 15 dk süreli sepet kilidi, JWT + döndürülen yenileme jetonu, QR doğrulamalı PDF sertifika, rol tabanlı yönetim paneli. 245 test.</p>
+            <div class="project-tech"><span>.NET 8</span><span>PostGIS</span><span>Next.js</span><span>MapLibre</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="mobile fullstack" data-note="Kendi girişimim — yayına hazırlanıyor, kaynak kodu özeldir." style="--d:0.20s">
+          <div class="project-media"><span class="project-emoji">🧭</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>ParkPusula</h3>
+              <span class="tag">Yayına hazırlanıyor</span>
+            </div>
+            <p>İstanbul için otopark bulma platformu. İSPARK açık doluluk verisi ve OpenStreetMap'ten derlenen 1.300+ otopark tek haritada. Expo mobil uygulama, Next.js tanıtım sitesi ve işletme paneli, veri senkronu yapan Node worker; Turborepo monorepo, Supabase RLS ile 27 senaryolu güvenlik testi.</p>
+            <div class="project-tech"><span>Expo</span><span>Next.js</span><span>Supabase/PostGIS</span><span>Turborepo</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="fullstack" data-live="https://noteblog-ctgpcke8hpcmbnf4.germanywestcentral-01.azurewebsites.net" data-code="https://github.com/YunusEdizer/NoteBlogProject" style="--d:0.25s">
           <div class="project-media"><span class="project-emoji">📝</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -253,7 +278,67 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="backend" data-code="https://github.com/YunusEdizer" style="--d:.2s">
+        <article class="project reveal" data-cat="web fullstack" data-live="https://www.camlicataksikars.com" data-code="https://github.com/YunusEdizer/kars-camlica-taksi" style="--d:0.30s">
+          <div class="project-media"><span class="project-emoji">🚕</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Çamlıca Taksi</h3>
+              <span class="tag tag-live">● Canlı</span>
+            </div>
+            <p>Kars merkez taksi durağı için yerel SEO odaklı tanıtım sitesi. Tek bir site.config.json'dan tüm sayfaları üreten Node.js statik site üreticisi; TR/EN çift dil, tıkla-ara ve WhatsApp konum akışları, havalimanı/gar/transfer ve rehber sayfaları, LocalBusiness JSON-LD. Vercel üzerinde canlı.</p>
+            <div class="project-tech"><span>Node.js</span><span>Statik Üretici</span><span>JSON-LD / SEO</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web fullstack" data-live="https://kars-oztekce-cekici.vercel.app" data-code="https://github.com/YunusEdizer/kars-oztekce-cekici" style="--d:0.35s">
+          <div class="project-media"><span class="project-emoji">🚛</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Öztekçe Oto Kurtarma</h3>
+              <span class="tag tag-live">● Canlı</span>
+            </div>
+            <p>Kars'ta 7/24 çekici ve yol yardımı sitesi. Konumu tek dokunuşla WhatsApp'a gönderen acil akış, 6 hizmet, 7 ilçe ve 3 karayolu sayfası, kış yolculuğu rehberleri. SVG gece sahnesi ve ilçe haritası üretimde çiziliyor.</p>
+            <div class="project-tech"><span>Node.js</span><span>Statik Üretici</span><span>JSON-LD / SEO</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web fullstack" data-live="https://tarim-dunyasi-kars.vercel.app" data-code="https://github.com/YunusEdizer/tarim-dunyasi-kars" style="--d:0.40s">
+          <div class="project-media"><span class="project-emoji">🚜</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Tarım Dünyası</h3>
+              <span class="tag tag-live">● Canlı</span>
+            </div>
+            <p>Kars'ta traktör ve tarım makineleri galerisi. Tıklanabilir parçalarıyla "makineyi tanıyın" teknik çizimi, bölgenin tarım takvimi, 5 ürün grubu ve 4 rehber, alım-satım talebini WhatsApp mesajına çeviren form. IndexNow ile anında dizinleme.</p>
+            <div class="project-tech"><span>Node.js</span><span>SVG</span><span>IndexNow</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web fullstack" data-live="https://nisa-celik-guzellik.vercel.app" data-code="https://github.com/YunusEdizer/nisa-celik-guzellik" style="--d:0.45s">
+          <div class="project-media"><span class="project-emoji">💄</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Black Rose &amp; Altın Maşa</h3>
+              <span class="tag tag-live">● Canlı</span>
+            </div>
+            <p>Kars'ta güzellik salonu sitesi. 12 hizmet sayfası, hizmet seçerek WhatsApp randevusu oluşturan akış, karşılaştırma tablolu 6 rehber yazısı, altın oran kaş şeması gibi üretimde çizilen SVG görseller ve yapay zeka arama motorları için llms.txt.</p>
+            <div class="project-tech"><span>Node.js</span><span>Statik Üretici</span><span>JSON-LD / SEO</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web fullstack" data-live="https://tazegul-yazilim.vercel.app" data-code="https://github.com/YunusEdizer/tazegul-yazilim-web" style="--d:0.50s">
+          <div class="project-media"><span class="project-emoji">🌹</span></div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Tazegül Yazılım</h3>
+              <span class="tag tag-live">● Canlı</span>
+            </div>
+            <p>Yazılım ve dijital ajans tanıtım sitesi. Sektöre göre çözüm sekmeleri, üç adımlı teklif sihirbazı (girilen bilgiler WhatsApp mesajına dönüşür), açık/koyu tema, KVKK aydınlatma sayfası ve güvenlik başlıkları. Bağımlılıksız saf HTML/CSS/JS, erişilebilirlik ve performans odaklı.</p>
+            <div class="project-tech"><span>HTML/CSS/JS</span><span>A11y</span><span>SEO</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="backend" data-code="https://github.com/YunusEdizer/smartscheduler-ai" style="--d:0.55s">
           <div class="project-media"><span class="project-emoji">🧬</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -265,7 +350,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="finance" data-code="https://github.com/YunusEdizer" style="--d:.25s">
+        <article class="project reveal" data-cat="finance" data-code="https://github.com/YunusEdizer" style="--d:0.60s">
           <div class="project-media"><span class="project-emoji">📈</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -277,7 +362,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="finance ai" data-code="https://github.com/YunusEdizer" style="--d:.3s">
+        <article class="project reveal" data-cat="finance ai" data-code="https://github.com/YunusEdizer" style="--d:0.65s">
           <div class="project-media"><span class="project-emoji">🧠</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -289,7 +374,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="backend fullstack" data-code="https://github.com/YunusEdizer" style="--d:.35s">
+        <article class="project reveal" data-cat="backend fullstack" data-code="https://github.com/YunusEdizer/hardware_monitoring_system" style="--d:0.70s">
           <div class="project-media"><span class="project-emoji">🖥️</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -301,7 +386,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="fullstack" data-code="https://github.com/YunusEdizer" style="--d:.4s">
+        <article class="project reveal" data-cat="fullstack" data-code="https://github.com/YunusEdizer/MindPulse" style="--d:0.75s">
           <div class="project-media"><span class="project-emoji">🎯</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -313,7 +398,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="mobile" data-code="https://github.com/YunusEdizer" style="--d:.45s">
+        <article class="project reveal" data-cat="mobile" data-code="https://github.com/YunusEdizer" style="--d:0.80s">
           <div class="project-media"><span class="project-emoji">🛡️</span></div>
           <div class="project-body">
             <div class="project-top">
@@ -325,7 +410,7 @@
           </div>
         </article>
 
-        <article class="project reveal" data-cat="ai" data-code="https://github.com/YunusEdizer" style="--d:.5s">
+        <article class="project reveal" data-cat="ai" data-code="https://github.com/YunusEdizer/Deep_Park_Final" style="--d:0.85s">
           <div class="project-media"><span class="project-emoji">🅿️</span></div>
           <div class="project-body">
             <div class="project-top">
