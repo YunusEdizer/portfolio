@@ -2,525 +2,437 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Yunus Emre Edizer — Yazılım Mühendisi</title>
-  <meta name="description" content="Full-Stack Yazılım Mühendisi — Backend, Yapay Zeka, Mobil & Web. .NET, Next.js, React Native ve Python ile fikirden canlıya ölçeklenebilir sistemler." />
+  <meta name="description" content="Yunus Emre Edizer: .NET, Next.js ve React Native ile App Store ve Google Play'de yayında ürünler geliştiren yazılım mühendisi. MotorumBurada, ParkPusula ve DeepPsy." />
   <meta name="author" content="Yunus Emre Edizer" />
-  <meta name="theme-color" content="#0a0b0e" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <link rel="canonical" href="https://yunusedizer.software/" />
-  <!-- Open Graph -->
+
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yunus Emre Edizer" />
   <meta property="og:url" content="https://yunusedizer.software/" />
-  <meta property="og:title" content="Yunus Emre Edizer — Full-Stack Yazılım Mühendisi" />
-  <meta property="og:description" content="Backend, Yapay Zeka & Dağıtık Sistemler. .NET, Next.js ve Python ile fikirden production'a." />
+  <meta property="og:title" content="Yunus Emre Edizer — Yazılım Mühendisi" />
+  <meta property="og:description" content="Fikirden App Store'a. Backend, mobil ve yapay zeka ile yayında ürünler." />
   <meta property="og:locale" content="tr_TR" />
   <meta property="og:image" content="https://yunusedizer.software/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Yunus Emre Edizer — Full-Stack Yazılım Mühendisi" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yunus Emre Edizer — Full-Stack Yazılım Mühendisi" />
-  <meta name="twitter:description" content="Backend, Yapay Zeka & Dağıtık Sistemler." />
+  <meta name="twitter:title" content="Yunus Emre Edizer — Yazılım Mühendisi" />
+  <meta name="twitter:description" content="Fikirden App Store'a. Backend, mobil ve yapay zeka ile yayında ürünler." />
   <meta name="twitter:image" content="https://yunusedizer.software/og-image.png" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230a0b0e'/><rect x='4' y='4' width='92' height='92' rx='21' fill='none' stroke='%23cbab72' stroke-width='4'/><text x='50' y='67' font-size='46' font-family='monospace' font-weight='bold' fill='%23cbab72' text-anchor='middle'>YE</text></svg>" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d1d1f'/><text x='50' y='66' font-size='44' font-family='-apple-system,Helvetica,Arial,sans-serif' font-weight='700' fill='%23ffffff' text-anchor='middle'>YE</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Yunus Emre Edizer",
+    "jobTitle": "Yazılım Mühendisi",
     "url": "https://yunusedizer.software/",
-    "image": "https://yunusedizer.software/og-image.png",
-    "jobTitle": "Full-Stack Yazılım Mühendisi",
     "email": "mailto:edizeryunusemre@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
-    "sameAs": [
-      "https://github.com/YunusEdizer",
-      "https://linkedin.com/in/edizeryunusemre"
-    ],
-    "knowsAbout": ["Backend Geliştirme", "Yapay Zeka", "Makine Öğrenmesi", "Dağıtık Sistemler", "Mobil Uygulama", "Teknik SEO", ".NET", "Next.js", "React Native", "Python", "PyTorch", "PostGIS"],
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "İstanbul Topkapı Üniversitesi" }
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "İstanbul Topkapı Üniversitesi" },
+    "sameAs": ["https://linkedin.com/in/edizeryunusemre", "https://github.com/YunusEdizer"],
+    "knowsAbout": [".NET", "Next.js", "React Native", "PostgreSQL", "PostGIS", "PyTorch", "Yapay Zeka"]
   }
   </script>
 </head>
 <body>
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Ambient background -->
-  <div class="ambient" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
+<nav class="nav" id="nav" aria-label="Ana menü">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">Yunus Emre Edizer</a>
+    <ul class="nav-links">
+      <li><a href="#urunler">Ürünler</a></li>
+      <li><a href="#yetkinlik">Yetkinlikler</a></li>
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#deneyim">Deneyim</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <a href="Yunus_Emre_Edizer_CV_TR.pdf" download class="nav-cta">CV</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span></button>
   </div>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#urunler">Ürünler</a>
+    <a href="#yetkinlik">Yetkinlikler</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#deneyim">Deneyim</a>
+    <a href="#iletisim">İletişim</a>
+    <a href="Yunus_Emre_Edizer_CV_TR.pdf" download>CV indir</a>
+  </div>
+</nav>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-brand">
-        <span class="brand-mark">YE</span>
-        <span class="brand-text">Edizer</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">Hakkında</a></li>
-        <li><a href="#stack">Yetkinlikler</a></li>
-        <li><a href="#projects">Projeler</a></li>
-        <li><a href="#experience">Deneyim</a></li>
-        <li><a href="#contact">İletişim</a></li>
+<header class="hero" id="top">
+  <p class="hero-kicker reveal">Yazılım Mühendisi · İstanbul</p>
+  <h1 class="hero-title reveal" style="--d:.05s">Fikirden<br />App Store'a.</h1>
+  <p class="hero-sub reveal" style="--d:.12s">.NET, Next.js ve React Native ile iki mobil uygulamayı sıfırdan geliştirip mağazalara çıkardım. Psikiyatride yapay zeka Ar‑Ge projesinde derin öğrenme hattı ve backend geliştiriyorum.</p>
+  <div class="hero-links reveal" style="--d:.2s">
+    <a href="#urunler" class="link-arrow">Ürünleri gör</a>
+    <a href="Yunus_Emre_Edizer_CV_TR.pdf" download class="link-arrow">CV indir</a>
+  </div>
+  <ul class="hero-stats reveal" style="--d:.3s" aria-label="Öne çıkan sayılar">
+    <li><strong>2</strong><span>uygulama mağazada</span></li>
+    <li><strong>10.000+</strong><span>aktif kullanıcı</span></li>
+    <li><strong>1.370+</strong><span>otopark tek haritada</span></li>
+    <li><strong>TRL6</strong><span>yapay zeka Ar‑Ge</span></li>
+  </ul>
+</header>
+
+<main>
+
+<!-- Öne çıkan ürünler -->
+<section class="products" id="urunler">
+
+  <article class="product product-dark">
+    <div class="product-copy reveal">
+      <p class="eyebrow">MotorumBurada</p>
+      <h2>Motosiklet alım‑satımının<br />yeni adresi.</h2>
+      <p class="lead">Kurucu Ortak &amp; CTO. .NET 8 API, Next.js web ve React Native uygulamasını sıfırdan geliştirdim; T.C. Ticaret Bakanlığı EİDS entegrasyonuyla ilanlar e‑Devlet üzerinden doğrulanıyor. 10.000'den fazla aktif kullanıcı, 500'den fazla ilan.</p>
+      <div class="product-links">
+        <a href="https://motorumburada.com" target="_blank" rel="noopener" class="link-arrow">motorumburada.com</a>
+        <a href="https://apps.apple.com/tr/app/motorumburada/id6791850764" target="_blank" rel="noopener" class="link-arrow">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.motorumburada" target="_blank" rel="noopener" class="link-arrow">Google Play</a>
+      </div>
+      <ul class="product-specs">
+        <li>.NET 8 · N‑Tier</li><li>Next.js / React 19</li><li>React Native</li><li>PostGIS · SignalR</li><li>Railway · Vercel · Supabase</li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
-        <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
-        <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-      <a href="#contact" class="nav-cta">İletişime Geç</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#about">Hakkında</a>
-      <a href="#stack">Yetkinlikler</a>
-      <a href="#projects">Projeler</a>
-      <a href="#experience">Deneyim</a>
-      <a href="#contact">İletişim</a>
+    <div class="product-visual reveal" style="--d:.1s" aria-hidden="true">
+      <div class="phone phone-mb">
+        <div class="phone-screen">
+          <div class="ph-bar"><i></i><i></i></div>
+          <div class="ph-search"></div>
+          <div class="ph-chips"><i></i><i></i><i></i></div>
+          <div class="ph-card"><div class="ph-img"></div><div class="ph-lines"><i></i><i></i></div></div>
+          <div class="ph-card"><div class="ph-img"></div><div class="ph-lines"><i></i><i></i></div></div>
+          <div class="ph-card"><div class="ph-img"></div><div class="ph-lines"><i></i><i></i></div></div>
+          <div class="ph-tab"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
     </div>
-  </nav>
+  </article>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="pulse"></span>
-        Yeni projelere açık · İstanbul, Türkiye
-      </div>
-      <h1 class="hero-title">
-        <span class="line reveal" style="--d:.05s">Yunus Emre</span>
-        <span class="line reveal grad" style="--d:.15s">Edizer</span>
-      </h1>
-      <p class="hero-role reveal" style="--d:.22s" aria-label="Uzmanlık alanları">
-        <span class="type-text" id="typeText"></span><span class="type-caret" aria-hidden="true"></span>
-      </p>
-      <p class="hero-sub reveal" style="--d:.3s">
-        Full-Stack Yazılım Mühendisi — <strong>Backend</strong>, <strong>Yapay Zeka</strong> &amp; <strong>Dağıtık Sistemler</strong>.
-        Fikirden canlı üretime kadar ölçeklenebilir ve güvenli sistemler tasarlıyorum.
-      </p>
-      <div class="hero-actions reveal" style="--d:.45s">
-        <a href="#projects" class="btn btn-primary" data-magnetic>Projeleri Gör</a>
-        <a href="Yunus_Emre_Edizer_CV_TR.pdf" download class="btn btn-ghost" data-magnetic>
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;vertical-align:-3px"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>CV İndir
-        </a>
-      </div>
-    </div>
-    <div class="hero-scroll reveal" style="--d:.8s">
-      <span>Keşfet</span>
-      <div class="scroll-line"></div>
-    </div>
-  </header>
-
-  <main>
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="section-head reveal">
-        <span class="eyebrow">01 — Hakkında</span>
-        <h2 class="section-title">Fikirden <span class="grad">production</span>'a<br />uçtan uca mühendislik.</h2>
-      </div>
-      <div class="about-grid">
-        <p class="about-lead reveal">
-          .NET, Next.js, React Native ve Python ekosistemlerinde uzmanlaşmış bir yazılım mühendisiyim.
-          Backend mimarisi, makine öğrenmesi entegrasyonu, coğrafi sistemler (PostGIS) ve mobil
-          uygulamalar alanında, canlıda çalışan ürünler geliştiriyorum.
-        </p>
-        <div class="about-points">
-          <div class="point reveal" style="--d:.1s">
-            <span class="point-ico">◆</span>
-            <div><h4>Kurumsal Ar-Ge</h4><p>Eurotech Bilişim &amp; Weunique AI'da Agile/Scrum takımlarında TRL6 seviyesinde AI projeleri.</p></div>
+  <article class="product product-light">
+    <div class="product-visual reveal" aria-hidden="true">
+      <div class="phone phone-pp">
+        <div class="phone-screen">
+          <div class="ph-map">
+            <span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span><span class="pin p4"></span><span class="pin p5"></span>
+            <span class="me"></span>
           </div>
-          <div class="point reveal" style="--d:.2s">
-            <span class="point-ico">◆</span>
-            <div><h4>Güvenlik &amp; Uyum</h4><p>KVKK/GDPR uyumlu takma kimliklendirme, veri maskeleme ve "unutulma hakkı" uç noktaları.</p></div>
-          </div>
-          <div class="point reveal" style="--d:.3s">
-            <span class="point-ico">◆</span>
-            <div><h4>DevOps &amp; TDD</h4><p>Docker, GitHub Actions CI/CD, xUnit ile %100 geçen test suitleri ve otomasyon.</p></div>
-          </div>
-          <div class="point reveal" style="--d:.4s">
-            <span class="point-ico">◆</span>
-            <div><h4>Ürün &amp; Yayın</h4><p>App Store ve Google Play'de yayında mobil uygulama; yerel işletmeler için SEO odaklı, hızlı web siteleri.</p></div>
+          <div class="ph-sheet">
+            <div class="ph-handle"></div>
+            <div class="ph-lines"><i></i><i></i></div>
+            <div class="ph-meter"><b></b></div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Stack -->
-    <section class="section" id="stack">
-      <div class="section-head reveal">
-        <span class="eyebrow">02 — Teknik Yetkinlikler</span>
-        <h2 class="section-title">Kullandığım <span class="grad">araç seti</span>.</h2>
-      </div>
-      <div class="stack-grid">
-        <article class="stack-card reveal">
-          <h4>Diller &amp; Backend</h4>
-          <div class="chips">
-            <span>C#</span><span>.NET 8/9</span><span>Python</span><span>FastAPI</span><span>Django</span><span>Node.js</span><span>TypeScript</span><span>SQL</span><span>C/C++</span>
-          </div>
-        </article>
-        <article class="stack-card reveal" style="--d:.1s">
-          <h4>Mimari &amp; Metodoloji</h4>
-          <div class="chips">
-            <span>N-Tier</span><span>Mikroservisler</span><span>RESTful API</span><span>Dağıtık Sistemler</span><span>TDD</span><span>Agile/Scrum</span><span>Multimodal Füzyon</span>
-          </div>
-        </article>
-        <article class="stack-card reveal" style="--d:.2s">
-          <h4>Frontend &amp; Mobil</h4>
-          <div class="chips">
-            <span>Next.js 16</span><span>React</span><span>React Native</span><span>Expo</span><span>MapLibre</span><span>Tailwind</span><span>PWA</span><span>Flutter/Dart</span>
-          </div>
-        </article>
-        <article class="stack-card reveal" style="--d:.3s">
-          <h4>Yapay Zeka &amp; Veri</h4>
-          <div class="chips">
-            <span>PyTorch</span><span>Computer Vision</span><span>Türkçe NLP</span><span>XGBoost</span><span>SHAP/XAI</span><span>YOLOv8</span><span>ShuffleNet V2</span>
-          </div>
-        </article>
-        <article class="stack-card reveal" style="--d:.4s">
-          <h4>DB, DevOps &amp; Güvenlik</h4>
-          <div class="chips">
-            <span>PostgreSQL</span><span>PostGIS</span><span>Supabase</span><span>MongoDB</span><span>Docker</span><span>Nginx</span><span>GitHub Actions</span><span>Azure</span><span>Vercel</span><span>JWT</span><span>KVKK/GDPR</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="section-head reveal">
-        <span class="eyebrow">03 — Öne Çıkan Projeler</span>
-        <h2 class="section-title">Ürettiğim <span class="grad">sistemler</span>.</h2>
-      </div>
-      <div class="filters reveal" id="filters">
-        <button class="filter active" data-filter="all">Tümü</button>
-        <button class="filter" data-filter="ai">Yapay Zeka</button>
-        <button class="filter" data-filter="fullstack">Full-Stack</button>
-        <button class="filter" data-filter="backend">Backend</button>
-        <button class="filter" data-filter="mobile">Mobil</button>
-        <button class="filter" data-filter="web">Web &amp; Yerel İşletme</button>
-        <button class="filter" data-filter="finance">Finans</button>
-      </div>
-      <div class="projects" id="projectGrid">
-        <article class="project reveal" data-cat="fullstack backend" data-live="https://motorumburada.com" data-note="Kendi girişimim — kaynak kodu özeldir.">
-          <div class="project-media"><span class="project-emoji">🏍️</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>MotorumBurada</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Canlıda çalışan motosiklet pazaryeri (motorumburada.com). .NET 8 N-Tier API + Next.js/React 19 + PostGIS konum araması + SignalR gerçek zamanlı sohbet + Web Push. Repository/UnitOfWork, Result pattern, admin moderasyon paneli ve audit log.</p>
-            <div class="project-tech"><span>.NET 8</span><span>Next.js</span><span>SignalR</span><span>PostGIS</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="mobile" data-store="https://apps.apple.com/tr/app/motorumburada/id6791850764" data-play="https://play.google.com/store/apps/details?id=com.motorumburada" data-note="Kendi girişimim — kaynak kodu özeldir." style="--d:0.05s">
-          <div class="project-media"><span class="project-emoji">📱</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>MotorumBurada Mobile</h3>
-              <span class="tag tag-live">● Yayında</span>
-            </div>
-            <p>Pazaryerinin resmi React Native mobil uygulaması. SignalR ile birebir mesajlaşma, Firebase push bildirimleri, harita/konum, çok adımlı ilan sihirbazı, favoriler ve açık/koyu tema. App Store ve Google Play'de yayında.</p>
-            <div class="project-tech"><span>React Native</span><span>TypeScript</span><span>Firebase</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="ai fullstack" data-live="https://deeppsy.eurotechbilisim.com.tr" data-note="Kurumsal Ar-Ge projesi (Eurotech Bilişim A.Ş.) — kaynak kodu özeldir." style="--d:0.10s">
-          <div class="project-media"><span class="project-emoji">🩺</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Psikiyatri AI</h3>
-              <span class="tag tag-live">● Canlı · TRL6</span>
-            </div>
-            <p>Multimodal klinik karar destek platformu. Görüntü (AU), ses (MFCC), Türkçe NLP ve giyilebilir sensör verilerini dikkat tabanlı füzyon katmanında birleştiren derin öğrenme hattı. SHAP/XAI karar motoru + PWA klinik panel.</p>
-            <div class="project-tech"><span>PyTorch</span><span>PWA</span><span>Multimodal</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="fullstack backend" data-note="Müşteri projesi — geliştirme aşamasında, kaynak kodu özeldir." style="--d:0.15s">
-          <div class="project-media"><span class="project-emoji">🗺️</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Sanal Parsel</h3>
-              <span class="tag">Geliştiriliyor</span>
-            </div>
-            <p>Türkiye haritasını 400 m²'lik sanal parsellere bölen satış platformu. Eşit alanlı (LAEA) projeksiyon sayesinde 1,96 milyar parselin hiçbiri veritabanına yazılmaz; kimlik koordinattan türetilir. Vektör karo servisi, süreli sepet kilidi, QR doğrulamalı PDF sertifika ve yönetim paneli. 245 test.</p>
-            <div class="project-tech"><span>.NET 8</span><span>PostGIS</span><span>Next.js</span><span>MapLibre</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="mobile fullstack" data-note="Kendi girişimim — yayına hazırlanıyor, kaynak kodu özeldir." style="--d:0.20s">
-          <div class="project-media"><span class="project-emoji">🧭</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>ParkPusula</h3>
-              <span class="tag">Yayına hazırlanıyor</span>
-            </div>
-            <p>İstanbul için otopark bulma platformu. İSPARK açık doluluk verisi ve OpenStreetMap'ten derlenen 1.300+ otopark tek haritada. Expo mobil uygulama, Next.js site ve işletme paneli, veri senkronu yapan Node worker; Turborepo monorepo ve 27 senaryolu RLS güvenlik testi.</p>
-            <div class="project-tech"><span>Expo</span><span>Next.js</span><span>Supabase</span><span>PostGIS</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="fullstack" data-live="https://noteblog-ctgpcke8hpcmbnf4.germanywestcentral-01.azurewebsites.net" data-code="https://github.com/YunusEdizer/NoteBlogProject" style="--d:0.25s">
-          <div class="project-media"><span class="project-emoji">📝</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>NoteBlog</h3>
-              <span class="tag tag-live">● Azure</span>
-            </div>
-            <p>Full-stack blog platformu. Bcrypt kimlik doğrulama, yazı CRUD, yorum/beğeni/yer imi, admin paneli (site istatistikleri, kullanıcı yönetimi), kategori etiketleri, site içi arama, okuma süresi tahmini. Azure App Service + MongoDB Atlas üzerinde canlı.</p>
-            <div class="project-tech"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Azure</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="web fullstack" data-live="https://www.camlicataksikars.com" data-code="https://github.com/YunusEdizer/kars-camlica-taksi" style="--d:0.30s">
-          <div class="project-media"><span class="project-emoji">🚕</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Çamlıca Taksi</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Kars merkez taksi durağı için yerel SEO odaklı tanıtım sitesi. Tek bir site.config.json'dan tüm sayfaları üreten Node.js statik site üreticisi; TR/EN çift dil, tıkla-ara ve WhatsApp konum akışları, havalimanı/gar/transfer ve rehber sayfaları, LocalBusiness JSON-LD. Vercel üzerinde canlı.</p>
-            <div class="project-tech"><span>Node.js</span><span>Statik Site</span><span>SEO</span><span>Vercel</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="web fullstack" data-live="https://kars-oztekce-cekici.vercel.app" data-code="https://github.com/YunusEdizer/kars-oztekce-cekici" style="--d:0.35s">
-          <div class="project-media"><span class="project-emoji">🚛</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Öztekçe Oto Kurtarma</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Kars'ta 7/24 çekici ve yol yardımı sitesi. Konumu tek dokunuşla WhatsApp'a gönderen acil akış, 6 hizmet, 7 ilçe ve 3 karayolu sayfası, kış yolculuğu rehberleri. SVG gece sahnesi ve ilçe haritası üretimde çiziliyor.</p>
-            <div class="project-tech"><span>Node.js</span><span>Statik Site</span><span>SEO</span><span>Vercel</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="web fullstack" data-live="https://tarim-dunyasi-kars.vercel.app" data-code="https://github.com/YunusEdizer/tarim-dunyasi-kars" style="--d:0.40s">
-          <div class="project-media"><span class="project-emoji">🚜</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Tarım Dünyası</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Kars'ta traktör ve tarım makineleri galerisi. Tıklanabilir parçalarıyla "makineyi tanıyın" teknik çizimi, bölgenin tarım takvimi, 5 ürün grubu ve 4 rehber, alım-satım talebini WhatsApp mesajına çeviren form. IndexNow ile anında dizinleme.</p>
-            <div class="project-tech"><span>Node.js</span><span>SVG</span><span>IndexNow</span><span>Vercel</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="web fullstack" data-live="https://nisa-celik-guzellik.vercel.app" data-code="https://github.com/YunusEdizer/nisa-celik-guzellik" style="--d:0.45s">
-          <div class="project-media"><span class="project-emoji">💄</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Black Rose &amp; Altın Maşa</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Kars'ta güzellik salonu sitesi. 12 hizmet sayfası, hizmet seçerek WhatsApp randevusu oluşturan akış, karşılaştırma tablolu 6 rehber yazısı, altın oran kaş şeması gibi üretimde çizilen SVG görseller ve yapay zeka arama motorları için llms.txt.</p>
-            <div class="project-tech"><span>Node.js</span><span>Statik Site</span><span>SEO</span><span>Vercel</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="web fullstack" data-live="https://tazegul-yazilim.vercel.app" data-code="https://github.com/YunusEdizer/tazegul-yazilim-web" style="--d:0.50s">
-          <div class="project-media"><span class="project-emoji">🌹</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>Tazegül Yazılım</h3>
-              <span class="tag tag-live">● Canlı</span>
-            </div>
-            <p>Yazılım ve dijital ajans tanıtım sitesi. Sektöre göre çözüm sekmeleri, üç adımlı teklif sihirbazı (girilen bilgiler WhatsApp mesajına dönüşür), açık/koyu tema, KVKK aydınlatma sayfası ve güvenlik başlıkları. Bağımlılıksız saf HTML/CSS/JS, erişilebilirlik ve performans odaklı.</p>
-            <div class="project-tech"><span>HTML/CSS/JS</span><span>A11y</span><span>SEO</span><span>Vercel</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="backend" data-code="https://github.com/YunusEdizer/smartscheduler-ai" style="--d:0.55s">
-          <div class="project-media"><span class="project-emoji">🧬</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>SmartScheduler</h3>
-              <span class="tag">Genetik Algoritma</span>
-            </div>
-            <p>Kısıt tabanlı ders programı üreten genetik algoritma motoru (kromozom/gen mutasyonu, Tournament Selection). What-if analizi, PDF/Excel dışa aktarma. xUnit ile %100 geçen 64 test + Docker CI hattı.</p>
-            <div class="project-tech"><span>ASP.NET Core 9</span><span>xUnit</span><span>Docker</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="finance" data-code="https://github.com/YunusEdizer/bist-pairtrader" style="--d:0.60s">
-          <div class="project-media"><span class="project-emoji">📈</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>BIST-PairTrader</h3>
-              <span class="tag">Kantitatif Finans</span>
-            </div>
-            <p>İstatistiksel arbitraj &amp; kointegrasyon motoru. Pearson korelasyonu (≥0.75) ve Engle-Granger (p≤0.05) testlerini zincirleyen çift seçimi. Z-skoru sinyali, komisyon/kayma dahil backtest, Half-Kelly &amp; %95 VaR risk katmanı.</p>
-            <div class="project-tech"><span>Python</span><span>OLS</span><span>Backtest</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="finance ai" data-code="https://github.com/YunusEdizer/bist-hi" style="--d:0.65s">
-          <div class="project-media"><span class="project-emoji">🧠</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>BIST-HI</h3>
-              <span class="tag">XAI</span>
-            </div>
-            <p>XGBoost destekli hibrit yatırım zekası. Temel/teknik göstergeleri (F/K, ROE, RSI, MACD) ve getiri olasılıklarını birleştirerek BIST100 hisselerini 0-100 skorlayan karar destek sistemi. SHAP ile şeffaf Streamlit arayüzü.</p>
-            <div class="project-tech"><span>Python</span><span>XGBoost</span><span>Streamlit</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="backend fullstack" data-code="https://github.com/YunusEdizer/hardware_monitoring_system" style="--d:0.70s">
-          <div class="project-media"><span class="project-emoji">🖥️</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>DevMonitor</h3>
-              <span class="tag">Dağıtık Sistem</span>
-            </div>
-            <p>Çok cihazlı gerçek zamanlı donanım izleme. Python (psutil) ajanı CPU/RAM/disk/ağ metriklerini 15 sn'de bir merkezi Django panele gönderir. Token auth, eşik tabanlı uyarı + anomali tespiti, e-posta bildirimi, 24s trend grafikleri, Windows service / Linux systemd kurucu.</p>
-            <div class="project-tech"><span>Django/DRF</span><span>PostgreSQL</span><span>Chart.js</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="fullstack" data-code="https://github.com/YunusEdizer/MindPulse" style="--d:0.75s">
-          <div class="project-media"><span class="project-emoji">🎯</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>MindPulse</h3>
-              <span class="tag">Blazor WASM</span>
-            </div>
-            <p>Bilişsel eğitim &amp; mental sağlık takip uygulaması. Reaksiyon süresi ve hafıza testleri, ruh hali notlarıyla günlük kayıt, geçmiş analizi ve liderlik tablosu (gamification). .NET 9 API + EF Core, tipli DTO'lar ve Blazor WebAssembly SPA.</p>
-            <div class="project-tech"><span>.NET 9</span><span>Blazor WASM</span><span>EF Core</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="mobile" data-code="https://github.com/YunusEdizer/warranty_box" data-note="Ders ekip projesi (EFC304) — Hamza Hakverir ile birlikte geliştirildi." style="--d:0.80s">
-          <div class="project-media"><span class="project-emoji">🛡️</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>WarrantyBox</h3>
-              <span class="tag">Flutter</span>
-            </div>
-            <p>Ürün garanti sürelerini takip eden tamamen çevrimdışı mobil uygulama. Yerel SQLite veritabanında CRUD, arama/sıralama, kalan gün hesabı, durum rozetleri (Aktif/Yaklaşıyor/Bitti), ilişkisel notlar (ON DELETE CASCADE) ve istatistik kartları.</p>
-            <div class="project-tech"><span>Flutter</span><span>Dart</span><span>SQLite</span></div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cat="ai" data-code="https://github.com/YunusEdizer/Deep_Park_Final" style="--d:0.85s">
-          <div class="project-media"><span class="project-emoji">🅿️</span></div>
-          <div class="project-body">
-            <div class="project-top">
-              <h3>DeepPark</h3>
-              <span class="tag">Deep Learning</span>
-            </div>
-            <p>Otopark doluluk tespiti. PKLot veri seti (32.327 görüntü) üzerinde ShuffleNet V2 ve YOLOv8-cls mimarilerini eğitip test ettim. Veri zenginleştirme (ColorJitter, RandomRotation) ve 5-Fold Cross Validation.</p>
-            <div class="project-tech"><span>PyTorch</span><span>Computer Vision</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section" id="experience">
-      <div class="section-head reveal">
-        <span class="eyebrow">04 — Deneyim &amp; Eğitim</span>
-        <h2 class="section-title">Yolculuk <span class="grad">zaman çizelgesi</span>.</h2>
-      </div>
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <span class="tl-date">02/2025 — Günümüz</span>
-          <h4>Yapay Zeka &amp; Yazılım Mühendisi</h4>
-          <p class="tl-org">Eurotech Bilişim A.Ş.</p>
-          <p>TRL6 seviyesinde kurumsal AI/yazılım Ar-Ge; ML entegrasyonu, veri boru hatları, KVKK/GDPR uyumu ve backend geliştirme.</p>
-        </div>
-        <div class="tl-item reveal" style="--d:.1s">
-          <div class="tl-dot"></div>
-          <span class="tl-date">09/2025 — 06/2026</span>
-          <h4>Yazılım Mühendisi (Geliştirici)</h4>
-          <p class="tl-org">Weunique AI</p>
-          <p>Insight QC ile ERP/MES/SAP arası veri akışı sağlayan full-stack çözümler; N-Tier .NET servisleri, Dapper &amp; sorgu optimizasyonu.</p>
-        </div>
-        <div class="tl-item reveal" style="--d:.2s">
-          <div class="tl-dot"></div>
-          <span class="tl-date">2023 — 2027 (bekl.)</span>
-          <h4>Yazılım Mühendisliği (Lisans)</h4>
-          <p class="tl-org">İstanbul Topkapı Üniversitesi</p>
-          <p>Tam Burslu · Son Sınıf</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="contact-card reveal">
-        <span class="eyebrow">05 — İletişim</span>
-        <h2 class="section-title">Bir sonraki projede<br /><span class="grad">birlikte çalışalım.</span></h2>
-        <p class="contact-sub">Backend, yapay zeka veya full-stack bir fikrin mi var? Konuşalım.</p>
-
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mqergdgb" method="POST" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="cf-name">Ad Soyad</label>
-              <input id="cf-name" name="name" type="text" required placeholder="Adınız" autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="cf-email">E-posta</label>
-              <input id="cf-email" name="email" type="email" required placeholder="ornek@mail.com" autocomplete="email" />
-            </div>
-          </div>
-          <div class="field">
-            <label for="cf-msg">Mesaj</label>
-            <textarea id="cf-msg" name="message" rows="4" required placeholder="Projeniz veya fikriniz hakkında kısaca..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="cfSubmit" data-magnetic>Mesaj Gönder</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-
-        <div class="contact-divider"><span>veya doğrudan ulaş</span></div>
-
-        <div class="contact-links">
-          <a href="mailto:edizeryunusemre@gmail.com" class="c-link"><span>✉</span> edizeryunusemre@gmail.com</a>
-          <a href="tel:+905382374571" class="c-link"><span>☎</span> +90 538 237 45 71</a>
-          <a href="https://linkedin.com/in/edizeryunusemre" target="_blank" rel="noopener" class="c-link"><span>in</span> LinkedIn</a>
-          <a href="https://github.com/YunusEdizer" target="_blank" rel="noopener" class="c-link"><span>⌥</span> GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Project detail modal -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" data-close aria-label="Kapat">✕</button>
-      <div class="modal-emoji" id="modalEmoji">🚀</div>
-      <span class="modal-tag" id="modalTag">Proje</span>
-      <h3 id="modalTitle">Proje</h3>
-      <p id="modalDesc">Açıklama</p>
-      <div class="project-tech" id="modalTech"></div>
-      <p class="modal-note" id="modalNote"></p>
-      <div class="modal-actions" id="modalActions"></div>
     </div>
+    <div class="product-copy reveal" style="--d:.1s">
+      <p class="eyebrow">ParkPusula</p>
+      <h2>İstanbul'da boş<br />otoparkı bul.</h2>
+      <p class="lead">Kurucu &amp; Geliştirici. İSPARK ve OpenStreetMap verisini birleştirip 39 ilçede 1.370'ten fazla otoparkı tek haritada sunan uygulama. Favori otopark boşalınca haber veriyor, şarj istasyonlarını gösteriyor. iOS App Store'da yayında, Android Google Play üretim onayında.</p>
+      <div class="product-links">
+        <a href="https://parkpusula.com" target="_blank" rel="noopener" class="link-arrow">parkpusula.com</a>
+        <a href="https://apps.apple.com/tr/app/parkpusula-otopark-bul/id6820031400" target="_blank" rel="noopener" class="link-arrow">App Store</a>
+      </div>
+      <ul class="product-specs">
+        <li>Expo / React Native</li><li>Next.js</li><li>Node.js worker</li><li>Supabase · PostGIS · RLS</li><li>p95 ≈ 135 ms @ 50 kullanıcı</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="product product-clinic">
+    <div class="product-copy reveal">
+      <p class="eyebrow">DeepPsy · Eurotech Bilişim</p>
+      <h2>Psikiyatride multimodal<br />karar desteği.</h2>
+      <p class="lead">TRL6 seviyesindeki Ar‑Ge projesinde görüntü, ses (MFCC), Türkçe metin ve giyilebilir sensör verilerini dikkat tabanlı füzyonla birleştiren derin öğrenme hattını ve SHAP tabanlı açıklanabilir karar motorunu geliştirdim. FastAPI ve PostgreSQL katmanıyla klinisyenlerin kullandığı PWA paneli uçtan uca çalışıyor; KVKK/GDPR için takma kimliklendirme ve unutulma hakkı uç noktaları.</p>
+      <div class="product-links">
+        <a href="https://deeppsy.eurotechbilisim.com.tr" target="_blank" rel="noopener" class="link-arrow">deeppsy.eurotechbilisim.com.tr</a>
+      </div>
+      <ul class="product-specs">
+        <li>PyTorch</li><li>Multimodal füzyon</li><li>SHAP / XAI</li><li>FastAPI · JWT</li><li>PWA</li>
+      </ul>
+    </div>
+    <div class="product-visual reveal" style="--d:.1s" aria-hidden="true">
+      <div class="panel">
+        <div class="panel-head"><i></i><i></i><i></i></div>
+        <div class="panel-grid">
+          <div class="panel-wave"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 30 C 20 10, 30 50, 50 30 S 80 10, 100 30 S 130 50, 150 30 S 180 10, 200 30" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="panel-bars"><b style="--h:55%"></b><b style="--h:80%"></b><b style="--h:35%"></b><b style="--h:65%"></b><b style="--h:90%"></b><b style="--h:45%"></b></div>
+          <div class="panel-lines"><i></i><i></i><i></i><i></i></div>
+          <div class="panel-ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5" fill="none" stroke="currentColor" stroke-opacity=".15" stroke-width="3"/><circle cx="18" cy="18" r="15.5" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="72 100" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<!-- Yetkinlikler -->
+<section class="section" id="yetkinlik">
+  <div class="section-head reveal">
+    <h2>Uçtan uca.</h2>
+    <p>Veritabanından mağaza yayınına kadar her katmanı ben kuruyorum.</p>
+  </div>
+  <div class="bento">
+    <article class="tile reveal">
+      <h3>Backend</h3>
+      <p>.NET 8/9, ASP.NET Core, EF Core, Dapper, SignalR, FastAPI, Django REST Framework, Node.js. REST API tasarımı, N‑Tier mimari, Repository / Unit of Work.</p>
+    </article>
+    <article class="tile reveal" style="--d:.05s">
+      <h3>Mobil ve web</h3>
+      <p>React Native, Expo, Next.js, React 19. App Store ve Google Play yayın süreçleri, Fastlane ve GitHub Actions ile otomatik mağaza yayın hattı.</p>
+    </article>
+    <article class="tile reveal" style="--d:.1s">
+      <h3>Yapay zeka</h3>
+      <p>PyTorch, bilgisayarlı görü, Türkçe doğal dil işleme, XGBoost, SHAP ile açıklanabilirlik. Multimodal füzyon ve klinik karar desteği.</p>
+    </article>
+    <article class="tile reveal" style="--d:.15s">
+      <h3>Veri ve altyapı</h3>
+      <p>PostgreSQL, PostGIS, Supabase, MongoDB. Docker, Nginx, Vercel, Railway, Hetzner, Cloudflare, Azure. Sağlık kontrolü, hız sınırlama, yük testi.</p>
+    </article>
+    <article class="tile reveal" style="--d:.2s">
+      <h3>Güvenlik ve uyum</h3>
+      <p>KVKK/GDPR kapsamında takma kimliklendirme, hassas veri maskeleme ve unutulma hakkı uç noktaları. Satır düzeyi güvenlik (RLS), JWT, e‑Devlet doğrulamalı ilan akışı.</p>
+    </article>
+    <article class="tile reveal" style="--d:.25s">
+      <h3>Yöntem</h3>
+      <p>Agile/Scrum, xUnit ile test güdümlü geliştirme, CI hattı. İngilizce: profesyonel çalışma yeterliliği.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Projeler -->
+<section class="section section-gray" id="projeler">
+  <div class="section-head reveal">
+    <h2>Projeler.</h2>
+    <p>Açık kaynaklı çalışmalar, müşteri işleri ve araştırma projeleri.</p>
   </div>
 
-  <footer class="footer">
-    <p>© 2026 Yunus Emre Edizer · İstanbul, Türkiye</p>
-    <p class="footer-note">Full-Stack Yazılım Mühendisi — Backend · AI · Dağıtık Sistemler</p>
-  </footer>
+  <div class="segmented reveal" role="tablist" aria-label="Proje filtresi" id="filters">
+    <button role="tab" class="active" data-filter="all" aria-selected="true">Tümü</button>
+    <button role="tab" data-filter="backend" aria-selected="false">Backend</button>
+    <button role="tab" data-filter="ai" aria-selected="false">Yapay zeka</button>
+    <button role="tab" data-filter="mobile" aria-selected="false">Mobil</button>
+    <button role="tab" data-filter="web" aria-selected="false">Web siteleri</button>
+  </div>
 
-  <button class="to-top" id="toTop" aria-label="Sayfa başına dön">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
-  </button>
+  <div class="grid" id="projectGrid">
 
-  <script src="script.js"></script>
+    <article class="card reveal" data-cat="backend">
+      <span class="badge">Müşteri projesi</span>
+      <h3>Sanal Parsel</h3>
+      <p>Harita tabanlı arsa satış platformu. Eşit alanlı (LAEA) projeksiyonla 1,96 milyar parselin kimliği koordinattan türetiliyor; yalnızca satılan parseller saklanıyor. Vektör karo servisi, süreli sepet kilidi, QR doğrulamalı PDF sertifika, 245 otomatik test.</p>
+      <p class="tech">.NET 8 · PostGIS · Next.js · MapLibre</p>
+    </article>
+
+    <article class="card reveal" data-cat="backend" style="--d:.05s">
+      <span class="badge">Açık kaynak</span>
+      <h3>SmartScheduler</h3>
+      <p>Kısıt tabanlı genetik algoritma ile ders programı üreten sistem. Turnuva seçimi, what‑if analizi, PDF/Excel dışa aktarma. Scrum ile 4 sprint; 64 xUnit testi ve GitHub Actions CI hattı.</p>
+      <p class="tech">ASP.NET Core 9 · Next.js · PostgreSQL · Docker</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/smartscheduler-ai" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="backend" style="--d:.1s">
+      <span class="badge">Açık kaynak</span>
+      <h3>DevMonitor</h3>
+      <p>Dağıtık ajanların 15 saniyede bir gönderdiği CPU, RAM, disk ve ağ metriklerini işleyen izleme sistemi. Eşik ve anomali tabanlı uyarı, e‑posta bildirimi; JSONB üzerinde 24 saatlik kayan pencereyle yüksek frekanslı yazmalarda kilitlenme yok.</p>
+      <p class="tech">Python · Django REST Framework · PostgreSQL</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/hardware_monitoring_system" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="ai" style="--d:.15s">
+      <span class="badge">Araştırma</span>
+      <h3>DeepPark</h3>
+      <p>PKLot veri setinde (32.327 görüntü) ShuffleNet V2 ve YOLOv8‑cls dâhil 8 CNN mimarisini 5 katlı çapraz doğrulamayla karşılaştıran otopark doluluk tespiti çalışması.</p>
+      <p class="tech">PyTorch · Bilgisayarlı görü</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/Deep_Park_Final" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="ai" style="--d:.2s">
+      <span class="badge">Açık kaynak</span>
+      <h3>BIST‑HI</h3>
+      <p>XGBoost destekli hibrit yatırım zekâsı. Temel ve teknik göstergeleri birleştirerek BIST100 hisselerini 0–100 arası skorlayan karar destek sistemi; SHAP ile şeffaf Streamlit arayüzü.</p>
+      <p class="tech">Python · XGBoost · SHAP · Streamlit</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/bist-hi" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="ai backend" style="--d:.25s">
+      <span class="badge">Açık kaynak</span>
+      <h3>BIST‑PairTrader</h3>
+      <p>İstatistiksel arbitraj ve kointegrasyon motoru. Pearson korelasyonu ve Engle‑Granger testiyle çift seçimi, z‑skoru sinyali, komisyon ve kayma dâhil backtest, Half‑Kelly ve %95 VaR risk katmanı.</p>
+      <p class="tech">Python · OLS · Backtest</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/bist-pairtrader" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="backend" style="--d:.3s">
+      <span class="badge badge-live">Canlı · Azure</span>
+      <h3>NoteBlog</h3>
+      <p>Full‑stack blog platformu. Bcrypt kimlik doğrulama, yazı, yorum, beğeni ve yer imi; admin paneli, site içi arama ve okuma süresi tahmini. Azure App Service ve MongoDB Atlas üzerinde.</p>
+      <p class="tech">Node.js · Express · MongoDB · Azure</p>
+      <a class="link-arrow" href="https://noteblog-ctgpcke8hpcmbnf4.germanywestcentral-01.azurewebsites.net" target="_blank" rel="noopener">Canlı</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/NoteBlogProject" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="mobile" style="--d:.35s">
+      <span class="badge">Açık kaynak</span>
+      <h3>MindPulse</h3>
+      <p>Bilişsel eğitim ve ruh hâli takibi. Reaksiyon ve hafıza testleri, günlük kayıt, geçmiş analizi ve liderlik tablosu. .NET 9 API, EF Core ve Blazor WebAssembly.</p>
+      <p class="tech">.NET 9 · Blazor WASM · EF Core</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/MindPulse" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="mobile" style="--d:.4s">
+      <span class="badge">Ekip projesi</span>
+      <h3>WarrantyBox</h3>
+      <p>Ürün garanti sürelerini takip eden tamamen çevrimdışı mobil uygulama. SQLite üzerinde CRUD, kalan gün hesabı, durum rozetleri ve istatistik kartları. Hamza Hakverir ile birlikte.</p>
+      <p class="tech">Flutter · Dart · SQLite</p>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/warranty_box" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.45s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Çamlıca Taksi</h3>
+      <p>Kars'ta taksi durağı için yerel SEO odaklı site. Tek yapılandırma dosyasından tüm sayfaları üreten Node.js statik site üreticisi, TR/EN, tıkla‑ara ve WhatsApp konum akışları, LocalBusiness JSON‑LD.</p>
+      <p class="tech">Node.js · Statik site · SEO · Vercel</p>
+      <a class="link-arrow" href="https://www.camlicataksikars.com" target="_blank" rel="noopener">camlicataksikars.com</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/kars-camlica-taksi" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.5s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Black Rose &amp; Altın Maşa</h3>
+      <p>Güzellik salonu sitesi. 12 hizmet sayfası, hizmet seçerek WhatsApp randevusu oluşturan akış, karşılaştırma tablolu rehber yazıları, üretimde çizilen SVG görseller ve yapay zeka arama motorları için llms.txt.</p>
+      <p class="tech">Node.js · Statik site · SEO · Vercel</p>
+      <a class="link-arrow" href="https://blackrosealtinmasa.com" target="_blank" rel="noopener">blackrosealtinmasa.com</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/nisa-celik-guzellik" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.55s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Öztekçe Oto Kurtarma</h3>
+      <p>7/24 çekici ve yol yardımı sitesi. Konumu tek dokunuşla WhatsApp'a gönderen acil akış, hizmet, ilçe ve karayolu sayfaları, kış yolculuğu rehberleri; SVG sahneler üretimde çiziliyor.</p>
+      <p class="tech">Node.js · Statik site · SEO · Vercel</p>
+      <a class="link-arrow" href="https://kars-oztekce-cekici.vercel.app" target="_blank" rel="noopener">Canlı</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/kars-oztekce-cekici" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.6s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Tarım Dünyası</h3>
+      <p>Traktör ve tarım makineleri galerisi. Tıklanabilir parçalarıyla teknik çizim, bölgenin tarım takvimi, ürün grupları ve rehberler; alım‑satım talebini WhatsApp mesajına çeviren form, IndexNow ile anında dizinleme.</p>
+      <p class="tech">Node.js · SVG · IndexNow · Vercel</p>
+      <a class="link-arrow" href="https://tarim-dunyasi-kars.vercel.app" target="_blank" rel="noopener">Canlı</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/tarim-dunyasi-kars" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.65s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Aleyna Adıgüzel · İngilizce</h3>
+      <p>Özel ders tanıtım sitesi. Sade tek sayfa, WhatsApp ile iletişim akışı, yerel SEO ve yapılandırılmış veri; Core Web Vitals odaklı statik üretim.</p>
+      <p class="tech">Statik site · SEO · Vercel</p>
+      <a class="link-arrow" href="https://aleyna-adiguzel-ingilizce.vercel.app" target="_blank" rel="noopener">Canlı</a>
+    </article>
+
+    <article class="card reveal" data-cat="web" style="--d:.7s">
+      <span class="badge badge-live">Canlı</span>
+      <h3>Tazegül Yazılım</h3>
+      <p>Yazılım ajansı tanıtım sitesi. Sektöre göre çözüm sekmeleri, üç adımlı teklif sihirbazı, açık/koyu tema, KVKK aydınlatma sayfası ve güvenlik başlıkları. Bağımlılıksız HTML/CSS/JS.</p>
+      <p class="tech">HTML · CSS · JS · Vercel</p>
+      <a class="link-arrow" href="https://tazegul-yazilim.vercel.app" target="_blank" rel="noopener">Canlı</a>
+      <a class="link-arrow" href="https://github.com/YunusEdizer/tazegul-yazilim-web" target="_blank" rel="noopener">GitHub</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- Deneyim -->
+<section class="section" id="deneyim">
+  <div class="section-head reveal">
+    <h2>Deneyim.</h2>
+  </div>
+  <ol class="timeline">
+    <li class="reveal">
+      <span class="when">09/2026 — Günümüz</span>
+      <div>
+        <h3>Kurucu Ortak &amp; CTO <span>MotorumBurada</span></h3>
+        <p>Motosiklet ilan ve servis platformu. .NET 8 API, Next.js web ve React Native uygulamasını sıfırdan geliştirip web, App Store ve Google Play'de yayına aldım; EİDS entegrasyonu, PostGIS konum araması, SignalR mesajlaşma, otomatik mağaza yayın hattı.</p>
+      </div>
+    </li>
+    <li class="reveal" style="--d:.05s">
+      <span class="when">09/2026 — Günümüz</span>
+      <div>
+        <h3>Kurucu &amp; Geliştirici <span>ParkPusula</span></h3>
+        <p>İstanbul otopark bulma uygulaması. Expo mobil, Next.js web ve işletme paneli, Node.js veri hattı; iOS App Store'da yayında. Supabase, Vercel, Hetzner ve Cloudflare üzerinde üretim ortamı.</p>
+      </div>
+    </li>
+    <li class="reveal" style="--d:.1s">
+      <span class="when">02/2025 — Günümüz</span>
+      <div>
+        <h3>Yazılım Uzmanı, Yapay Zeka &amp; Backend <span>Eurotech Bilişim A.Ş. · yarı zamanlı</span></h3>
+        <p>DeepPsy Ar‑Ge projesinde multimodal derin öğrenme hattı, SHAP/XAI karar motoru, FastAPI ve PostgreSQL entegrasyonu, KVKK/GDPR uyum uç noktaları.</p>
+      </div>
+    </li>
+    <li class="reveal" style="--d:.15s">
+      <span class="when">09/2025 — 06/2026</span>
+      <div>
+        <h3>Yazılım Mühendisi, Stajyer <span>Weunique AI</span></h3>
+        <p>Kurumsal kalite kontrol aracı Insight QC ile ERP/MES/SAP sistemleri arasında veri akışı sağlayan full‑stack çözümler; N‑Tier .NET servisleri, Dapper ve sorgu optimizasyonu.</p>
+      </div>
+    </li>
+    <li class="reveal" style="--d:.2s">
+      <span class="when">2023 — 2027</span>
+      <div>
+        <h3>Yazılım Mühendisliği, Lisans <span>İstanbul Topkapı Üniversitesi</span></h3>
+        <p>ÖSYM yerleşme bursu (%100). Son sınıf.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- İletişim -->
+<section class="section section-gray" id="iletisim">
+  <div class="section-head reveal">
+    <h2>Birlikte çalışalım.</h2>
+    <p>Backend, mobil ve yapay zeka projeleri için ulaşabilirsiniz.</p>
+  </div>
+  <div class="contact reveal" style="--d:.05s">
+    <div class="contact-side">
+      <a href="mailto:edizeryunusemre@gmail.com" class="btn-pill">edizeryunusemre@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/edizeryunusemre" target="_blank" rel="noopener" class="link-arrow">LinkedIn</a>
+        <a href="https://github.com/YunusEdizer" target="_blank" rel="noopener" class="link-arrow">GitHub</a>
+        <a href="tel:+905382374571" class="link-arrow">+90 538 237 45 71</a>
+      </div>
+    </div>
+    <form class="form" id="contactForm" action="https://formspree.io/f/mqergdgb" method="POST" novalidate>
+      <label><span>Ad Soyad</span><input type="text" name="name" required autocomplete="name" /></label>
+      <label><span>E‑posta</span><input type="email" name="email" required autocomplete="email" /></label>
+      <label><span>Mesaj</span><textarea name="message" rows="4" required></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+      <button type="submit" class="btn-pill">Gönder</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Yunus Emre Edizer · İstanbul</p>
+  <p><a href="Yunus_Emre_Edizer_CV_TR.pdf" download>CV</a> · <a href="https://linkedin.com/in/edizeryunusemre" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/YunusEdizer" target="_blank" rel="noopener">GitHub</a></p>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>

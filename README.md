@@ -1,60 +1,29 @@
 # Yunus Emre Edizer — Portföy
 
-Full-Stack Yazılım Mühendisi kişisel portföy sitesi.
-Backend · Yapay Zeka · Dağıtık Sistemler.
+Kişisel portföy sitesi. Canlı: https://yunusedizer.software
 
-🔗 **Canlı:** https://yunusedizer.software
-
-## Teknoloji
-
-Bağımlılık gerektirmeyen, tamamen statik bir site:
-
-- **HTML5** — semantik yapı, SEO & Open Graph meta etiketleri
-- **CSS3** — özel tasarım sistemi, açık/koyu tema, responsive
-- **Vanilla JavaScript** — scroll animasyonları, proje filtreleme, modal, 3D tilt, iletişim formu
-
-Framework yok, build adımı yok. `index.html` doğrudan tarayıcıda çalışır.
+Bağımlılık gerektirmeyen statik site: `index.html`, `styles.css`, `script.js`. Framework ve build adımı yok.
+Tasarım: açık/koyu tema sistem tercihine göre, büyük tipografi, buzlu cam menü, ürün vitrinleri (MotorumBurada, ParkPusula, DeepPsy), proje ızgarası ve iletişim formu (Formspree).
 
 ## Yerelde çalıştırma
 
 ```bash
-# Herhangi bir statik sunucu yeterli:
-python -m http.server 8000
-# → http://localhost:8000
+python -m http.server 4210
 ```
-
-Ya da VS Code **Live Server** eklentisiyle `index.html`'i aç.
 
 ## Yayına alma
 
-GitHub Pages ile otomatik dağıtım. `main` dalına her push otomatik yayınlanır:
+GitHub Pages, `main` dalına her push'ta otomatik yayınlar; 1–2 dakika içinde canlıya çıkar.
 
-```bash
-git add -A
-git commit -m "Değişiklik açıklaması"
-git push
-```
-
-1-2 dakika içinde https://yunusedizer.software güncellenir.
-
-## Dosya yapısı
+## Dosyalar
 
 ```
-index.html    → Sayfa içeriği ve yapısı
-styles.css    → Tasarım, tema, responsive
-script.js     → Etkileşimler
-robots.txt    → Arama motoru yönergeleri
-sitemap.xml   → Site haritası
-404.html      → Özel hata sayfası
-CNAME         → Özel domain (yunusedizer.software)
+index.html                   Sayfa
+styles.css                   Tasarım ve tema
+script.js                    Menü, belirme, proje filtresi, form
+cv/cv-tr.html                CV kaynağı (PDF Edge headless ile üretilir)
+Yunus_Emre_Edizer_CV_TR.pdf  Yayındaki CV
+404.html, robots.txt, sitemap.xml, CNAME
 ```
 
-## İletişim
-
-- ✉️ edizeryunusemre@gmail.com
-- 💼 [LinkedIn](https://linkedin.com/in/edizeryunusemre)
-- 🐙 [GitHub](https://github.com/YunusEdizer)
-
----
-
-© 2026 Yunus Emre Edizer · İstanbul, Türkiye
+© 2026 Yunus Emre Edizer · İstanbul
