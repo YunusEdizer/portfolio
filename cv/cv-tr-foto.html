@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yunus Emre Edizer — Özgeçmiş</title>
+<style>
+  @page { size: A4; margin: 8mm 12mm 6mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Cambria, "Times New Roman", serif; font-size: 9pt; line-height: 1.2; color: #000; }
+  a { color: #000; text-decoration: none; }
+
+  header { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 4px; }
+  .head-text { text-align: left; min-width: 0; flex: 1; }
+  h1 { font-size: 20pt; font-weight: 700; letter-spacing: .6px; }
+  .contact { margin-top: 3px; font-size: 8.6pt; line-height: 1.5; display: flex; flex-wrap: wrap; }
+  .contact span { white-space: nowrap; }
+  .contact span + span::before { content: "|"; margin: 0 6px; }
+  .photo { width: 25mm; height: 33mm; object-fit: cover; border: .6px solid #000; flex: none; }
+  section { margin-top: 5px; }
+  .entry { margin-bottom: 4px; }
+
+  h2 { font-size: 9.6pt; font-weight: 700; font-variant: small-caps; letter-spacing: .6px;
+       border-bottom: .8px solid #000; padding-bottom: 1px; margin-bottom: 4px; }
+
+  .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .line .r { white-space: nowrap; }
+  .org { font-weight: 700; }
+  .role, .dates, .stack { font-style: italic; }
+  ul { margin: 1.5px 0 0 15px; }
+  li { margin-bottom: 0; padding-left: 1px; }
+
+  .skills div { margin-bottom: 1px; }
+  .skills b { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-text">
+  <h1>Yunus Emre Edizer</h1>
+  <div class="contact">
+    <span>İstanbul, Türkiye</span><span>+90 538 237 45 71</span><span><a href="mailto:edizeryunusemre@gmail.com">edizeryunusemre@gmail.com</a></span><span><a href="https://linkedin.com/in/edizeryunusemre">linkedin.com/in/edizeryunusemre</a></span><span><a href="https://github.com/YunusEdizer">github.com/YunusEdizer</a></span><span><a href="https://yunusedizer.software">yunusedizer.software</a></span>
+  </div>
+  </div>
+  <img class="photo" src="foto.png" alt="Yunus Emre Edizer" />
+</header>
+
+<section>
+  <h2>Özet</h2>
+  <p>Yazılım mühendisliği son sınıf öğrencisi; .NET, Next.js ve React Native ile iki mobil uygulamayı sıfırdan geliştirip App Store ve Google Play'de yayına almış, üretim altyapılarını işleten kurucu geliştirici. Psikiyatride yapay zeka Ar-Ge projesinde derin öğrenme hattı ve backend geliştirdi.</p>
+</section>
+
+<section>
+  <h2>Eğitim</h2>
+  <div class="entry">
+    <div class="line"><div class="org">İstanbul Topkapı Üniversitesi</div><div class="r">İstanbul</div></div>
+    <div class="line"><div class="role">Yazılım Mühendisliği, Lisans — ÖSYM Yerleşme Bursu (%100)</div><div class="r dates">2023 – 2027 (beklenen)</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Deneyim</h2>
+
+  <div class="entry">
+    <div class="line"><div class="org">MotorumBurada <span style="font-weight:400">— motosiklet ilan ve servis platformu (<a href="https://motorumburada.com">motorumburada.com</a>)</span></div><div class="r">İstanbul</div></div>
+    <div class="line"><div class="role">Kurucu Ortak &amp; CTO</div><div class="r dates">09/2026 – Günümüz</div></div>
+    <ul>
+      <li>.NET 8 REST API (N-Tier, Repository/Unit of Work), Next.js/React 19 web ve React Native iOS/Android uygulamasını sıfırdan geliştirip web, App Store ve Google Play'de yayına aldı; platform 10.000'den fazla aktif kullanıcıya ve 500'den fazla ilana ulaştı.</li>
+      <li>T.C. Ticaret Bakanlığı EİDS entegrasyonunu kurdu; taşıt ilanlarını plaka üzerinden e-Devlet ile doğrulayan akışı ve sabit çıkış IP'si gerektiren servis için Nginx reverse proxy'yi devreye aldı.</li>
+      <li>PostGIS ile konum tabanlı arama, SignalR ile gerçek zamanlı mesajlaşma, push bildirimleri, SMS ile telefon doğrulama ve yönetici moderasyon panelini geliştirdi.</li>
+      <li>Railway, Vercel, Supabase (PostgreSQL) ve Cloudflare üzerindeki üretim ortamını; GitHub Actions ve Fastlane ile otomatik mağaza yayın hattını, sağlık kontrolü ve hız sınırlamayı yönetiyor.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div class="org">ParkPusula <span style="font-weight:400">— İstanbul otopark bulma uygulaması (<a href="https://parkpusula.com">parkpusula.com</a>)</span></div><div class="r">İstanbul</div></div>
+    <div class="line"><div class="role">Kurucu &amp; Geliştirici</div><div class="r dates">09/2026 – Günümüz</div></div>
+    <ul>
+      <li>Expo/React Native mobil uygulama, Next.js web ve işletme paneli ile Node.js worker'ı Turborepo monorepo'da sıfırdan geliştirdi; iOS uygulaması App Store'da yayında, Android sürümü Google Play üretim onayında.</li>
+      <li>İSPARK ve OpenStreetMap verisini birleştirip 39 ilçede 1.370+ otoparkı tek haritada sunan, doluluğu periyodik güncelleyen veri hattı; favori otopark boşalınca push bildirimi, şarj istasyonu katmanı, Supabase/PostGIS üzerinde RLS tabanlı güvenlik.</li>
+      <li>Supabase, Vercel, Hetzner (systemd worker) ve Cloudflare üzerindeki üretim ortamını kurdu; canlı yük testinde 50 eşzamanlı kullanıcıda p95 ≈ 135 ms, sıfır hata.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div class="org">Eurotech Bilişim A.Ş.</div><div class="r">İstanbul</div></div>
+    <div class="line"><div class="role">Yazılım Uzmanı — Yapay Zeka &amp; Backend (yarı zamanlı)</div><div class="r dates">02/2025 – Günümüz</div></div>
+    <ul>
+      <li>TRL6 seviyesindeki DeepPsy (psikiyatride multimodal karar destek) Ar-Ge projesinde görüntü, ses (MFCC), Türkçe metin ve giyilebilir sensör verilerini dikkat tabanlı füzyonla birleştiren derin öğrenme hattını ve SHAP/XAI karar motorunu geliştirdi.</li>
+      <li>Modelleri FastAPI, JWT ve PostgreSQL katmanlarıyla entegre ederek klinisyenlerin kullandığı, canlı ses kaydı işleme ve raporlama içeren PWA panelini uçtan uca çalışır hâle getirdi.</li>
+      <li>KVKK/GDPR kapsamında takma kimliklendirme, hassas metin maskeleme ve "unutulma hakkı" için veri silme uç noktalarını geliştirdi.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div class="org">Weunique AI</div><div class="r">İstanbul</div></div>
+    <div class="line"><div class="role">Yazılım Mühendisi (Stajyer)</div><div class="r dates">09/2025 – 06/2026</div></div>
+    <ul>
+      <li>Çevik bir ekipte kurumsal kalite kontrol aracı (Insight QC) ile ERP/MES/SAP sistemleri arasında veri akışı sağlayan full-stack çözümler geliştirdi.</li>
+      <li>.NET ile N-Tier backend servisleri yazdı; yüksek hacimli işlemler için Dapper ve sorgu optimizasyonu uyguladı.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section>
+  <h2>Projeler</h2>
+
+  <div class="entry">
+    <div class="line"><div><span class="org">Sanal Parsel</span> | <span class="stack">.NET 8, PostgreSQL/PostGIS, Next.js, MapLibre</span></div></div>
+    <ul><li>Harita tabanlı arsa satış platformu: eşit alanlı (LAEA) projeksiyonla 1,96 milyar parselin kimliğini koordinattan türeterek yalnızca satılan parselleri saklayan mimari; vektör karo servisi, süreli sepet kilidi, 245 otomatik test.</li></ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div><span class="org">SmartScheduler</span> | <span class="stack">ASP.NET Core 9, Next.js, PostgreSQL, xUnit, Docker</span></div></div>
+    <ul><li>Kısıt tabanlı genetik algoritma ile ders programı üreten sistem; Scrum ile 4 sprintte geliştirildi; 64 birim/entegrasyon testi ve GitHub Actions CI hattı.</li></ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div><span class="org">DevMonitor</span> | <span class="stack">Python, Django REST Framework, PostgreSQL</span></div></div>
+    <ul><li>Dağıtık ajanların 15 saniyede bir gönderdiği CPU/RAM/disk/ağ metriklerini işleyen, eşik ve anomali tabanlı uyarı üreten izleme sistemi; JSONB üzerinde 24 saatlik kayan pencere ile yüksek frekanslı yazmalarda kilitlenmeyi önledi.</li></ul>
+  </div>
+
+  <div class="entry">
+    <div class="line"><div><span class="org">DeepPark</span> | <span class="stack">PyTorch, bilgisayarlı görü</span></div></div>
+    <ul><li>PKLot veri setinde (32.327 görüntü) 8 CNN mimarisini 5 katlı çapraz doğrulamayla karşılaştıran otopark doluluk tespiti çalışması.</li></ul>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Teknik Yetkinlikler</h2>
+  <div><b>Diller:</b> C#, TypeScript, JavaScript, Python, SQL</div>
+  <div><b>Backend:</b> .NET 8/9 (ASP.NET Core, EF Core, Dapper, SignalR), FastAPI, Django REST Framework, Node.js, REST API tasarımı</div>
+  <div><b>Frontend ve Mobil:</b> React, Next.js, React Native, Expo, Blazor, Flutter</div>
+  <div><b>Veri ve Altyapı:</b> PostgreSQL, PostGIS, Supabase, MongoDB, Docker, GitHub Actions, Fastlane, Vercel, Railway, Azure, Cloudflare, Nginx</div>
+  <div><b>Yapay Zeka:</b> PyTorch, bilgisayarlı görü, doğal dil işleme, XGBoost, SHAP</div>
+  <div><b>Yöntem ve Dil:</b> Agile/Scrum, test güdümlü geliştirme (xUnit), KVKK/GDPR uyumu; İngilizce — profesyonel çalışma yeterliliği</div>
+</section>
+
+</body>
+</html>
